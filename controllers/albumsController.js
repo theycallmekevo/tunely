@@ -11,8 +11,20 @@ db.Album.find({}, function(err, album) {
 }
 
 function create(req, res) {
-  // FILL ME IN !
+console.log('body', req.body);
+
+var genres = req.body.genres.split(',').map(function(item) { return item.trim(); } );
+req.body.genres = genres;
+
+db.Album.create(req.body, function(err, album){
+  if(err) { console.log('error', err); }
+  console.log(album);
+  res.json(album);
+});
 }
+
+
+
 
 function show(req, res) {
   // FILL ME IN !
