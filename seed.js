@@ -26,7 +26,7 @@ var albumsList = [
                 genres: [ 'electronica', 'breakbeat hardcore', 'rave', 'jungle' ]
               },
               {
-                
+
                 artistName: 'Johnny Cash',
                 name: 'Unchained',
                 releaseDate: '1996, November 5',
