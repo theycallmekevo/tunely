@@ -10,10 +10,22 @@ $.ajax({
   success: handleGetAlbumSuccess,
   error: handleGetAlbumError
   })
+
+  $( "#albumForm" ).on( "submit", function( event ) {
+    event.preventDefault();
+
+    var formData = $(this).serialize();
+    console.log(formData);
+  });
+
+
+
+
+
 });
 
 function handleGetAlbumSuccess(data){
-  var recievedAlbums = data;    
+  var recievedAlbums = data;
   recievedAlbums.forEach(function renderOneAlbum(album){
     renderAlbum(album);
   });
