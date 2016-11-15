@@ -13,7 +13,7 @@ $.ajax({
 });
 
 function handleGetAlbumSuccess(data){
-  var recievedAlbums = data.albums;    //where does data come from???
+  var recievedAlbums = data.albums;    
   recievedAlbums.forEach(function renderOneAlbum(album){
     renderAlbum(album);
   });
